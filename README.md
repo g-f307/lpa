@@ -7,7 +7,7 @@ Além da visualização de gráficos, o sistema realiza **previsões de temperat
 
 ---
 
-## 📌 Funcionalidades
+## 📌 FUNCIONALIDADES
 
 - Busca de dados climáticos de qualquer cidade do mundo.
 - Visualização gráfica (temperatura, umidade ou vento) para 24h, 3 ou 5 dias.
@@ -19,7 +19,7 @@ Além da visualização de gráficos, o sistema realiza **previsões de temperat
 
 ---
 
-## 🧠 Visão Geral Técnica
+## 🧠 VISÃO GERAL TÉCNICA
 
 ### Fluxo de Funcionamento:
 
@@ -39,7 +39,7 @@ Além da visualização de gráficos, o sistema realiza **previsões de temperat
 
 ---
 
-## 📁 Estrutura do Código
+## 📁 ESTRUTURA DO CÓDIGO
 
 | Seção | Função Principal | Descrição |
 |-------|------------------|-----------|
@@ -53,7 +53,7 @@ Além da visualização de gráficos, o sistema realiza **previsões de temperat
 
 ---
 
-## 📈 Variáveis Usadas na Regressão
+## 📈 VARIÁVEIS USADAS NA REGRESSÃO:
 
 | Variável | Significado |
 |----------|-------------|
@@ -66,7 +66,7 @@ Além da visualização de gráficos, o sistema realiza **previsões de temperat
 
 ---
 
-## 🛠️ Tecnologias Utilizadas
+## 🛠️ TECNOLOGIAS UTILIZADAS:
   
 | Tecnologia         | Finalidade                           |
 |--------------------|--------------------------------------|
@@ -80,7 +80,7 @@ Além da visualização de gráficos, o sistema realiza **previsões de temperat
 
 ---
 
-## 📦 Como Executar Localmente
+## 📦 COMO EXECUTAR LOCALMENTE
 
 ### Pré-requisitos
 
@@ -129,7 +129,7 @@ Acesse no navegador: [http://localhost:8501](http://localhost:8501)
 
 ---
 
-## 🧠 Modelo de Previsão
+## 🧠 MODELO DE PREVISÃO:
 
 - **Tipo**: Regressão Linear (Scikit-Learn)
 - **Features utilizadas**:
@@ -144,7 +144,7 @@ Acesse no navegador: [http://localhost:8501](http://localhost:8501)
 
 ---
 
-## 💡 Sugestões de Customização (passível de melhorias)
+## 💡 SUGESTÕES DE CUSTOMIZAÇÕES (PASSÍVEIS DE MELHORIAS)
 
 - Trocar o modelo de regressão por **Random Forest**, **XGBoost** ou **LSTM**.
 - Adicionar suporte a múltiplas previsões sequenciais (ex: 6h, 9h à frente).
@@ -153,7 +153,7 @@ Acesse no navegador: [http://localhost:8501](http://localhost:8501)
 
 ---
 
-## 📚 Referências Técnicas
+## 📚 REFERÊNCIAS
 
 - [Documentação OpenWeatherMap](https://openweathermap.org/forecast5)
 - [Documentação Streamlit](https://docs.streamlit.io/)
@@ -162,6 +162,6 @@ Acesse no navegador: [http://localhost:8501](http://localhost:8501)
 
 ---
 
-## 📄 Licença
+## 📄 LICENÇA
 
 Este projeto é livre para uso acadêmico e educacional. Para uso comercial, entre em contato com o autor.
