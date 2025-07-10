@@ -43,6 +43,7 @@ Além da visualização de gráficos, o sistema realiza **previsões de temperat
 
 - [Anaconda ou Miniconda](https://www.anaconda.com/) (Sugestão de ambiente de desenvolvimento)
 - Chave de API do OpenWeatherMap (gratuita em: https://openweathermap.org/api)
+- Git (para clonar o repositório)
 
 ### 1. Crie um Ambiente Virtual com Conda
 
