@@ -9,18 +9,20 @@ Além da visualização de gráficos, o sistema realiza **previsões de temperat
 
 ## 📌 Funcionalidades
 
-- 🔍 Busca de dados climáticos de qualquer cidade do mundo.
-- 📈 Visualização gráfica (temperatura, umidade ou vento) para 24h, 3 ou 5 dias.
-- 🧠 Previsão automática de temperatura usando modelo de **regressão linear**.
-- 📊 Exibição de estatísticas resumidas (média, máxima e mínima).
-- 🌍 Comparação lado a lado entre duas cidades.
-- 📁 Tabela com dados brutos processados.
-- 💾 Cache de resultados para otimizar o uso da API.
+- Busca de dados climáticos de qualquer cidade do mundo.
+- Visualização gráfica (temperatura, umidade ou vento) para 24h, 3 ou 5 dias.
+- Previsão automática de temperatura usando modelo de **regressão linear**.
+- Exibição de estatísticas resumidas (média, máxima e mínima).
+- Comparação lado a lado entre duas cidades.
+- Tabela com dados brutos processados.
+- Cache de resultados para otimizar o uso da API.
 
 ---
 
 ## 🛠️ Tecnologias Utilizadas
 
+<div align=center>
+  
 | Tecnologia         | Finalidade                           |
 |--------------------|--------------------------------------|
 | Python             | Lógica da aplicação                  |
@@ -31,37 +33,39 @@ Além da visualização de gráficos, o sistema realiza **previsões de temperat
 | OpenWeatherMap API | Fonte dos dados climáticos           |
 | Requests           | Requisições HTTP                     |
 
+</div>
+
 ---
 
 ## 📦 Como Executar Localmente
 
-### ✅ Pré-requisitos
+### Pré-requisitos
 
-- [Anaconda ou Miniconda](https://www.anaconda.com/)
+- [Anaconda ou Miniconda](https://www.anaconda.com/) (Sugestão de ambiente de desenvolvimento)
 - Chave de API do OpenWeatherMap (gratuita em: https://openweathermap.org/api)
 
-### 🧪 1. Crie um Ambiente Virtual com Conda
+### 1. Crie um Ambiente Virtual com Conda
 
 Recomenda-se isolar o ambiente para evitar conflitos de dependências:
 
 ```bash
-conda create -n novo_lpa_clima python=3.9 pandas numpy matplotlib requests streamlit scikit-learn jupyter -y
+conda create -n lpa_clima python=3.9 pandas numpy matplotlib requests streamlit scikit-learn jupyter -y
 ```
 
 Depois, ative o ambiente:
 
 ```bash
-conda activate novo_lpa_clima
+conda activate lpa_clima
 ```
 
-### 📁 2. Clone o Repositório
+### 2. Clone o Repositório
 
 ```bash
-git clone https://github.com/seu-usuario/projeto-clima.git
-cd projeto-clima
+git clone https://github.com/g-f307/lpa.git
+cd lpa
 ```
 
-### 🔧 3. Configure sua Chave da API
+### 3. Configure sua Chave da API
 
 No arquivo `LPA_Final.py`, substitua a linha:
 
@@ -71,7 +75,7 @@ API_KEY = "f323af5a10043e6368d0d173fc7cae17"
 
 Pela sua própria chave da API, obtida no site do [OpenWeatherMap](https://openweathermap.org/api).
 
-### ▶️ 4. Execute a Aplicação
+### 4. Execute a Aplicação
 
 ```bash
 streamlit run LPA_Final.py
