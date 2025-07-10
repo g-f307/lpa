@@ -19,9 +19,54 @@ Além da visualização de gráficos, o sistema realiza **previsões de temperat
 
 ---
 
-## 🛠️ Tecnologias Utilizadas
+## 🧠 Visão Geral Técnica
 
-<div align=center>
+### Fluxo de Funcionamento:
+
+1. **Entrada do Usuário**: O usuário escolhe uma cidade e um período (24h, 3 ou 5 dias).
+2. **Busca de Dados**: A aplicação consulta a API OpenWeatherMap e armazena os dados em cache.
+3. **Pré-processamento**:
+   - Conversão de datas e horas
+   - Extração de variáveis como hora, dia da semana, mês, etc.
+4. **Treinamento do Modelo**:
+   - Um modelo de regressão linear é treinado com os dados disponíveis para prever a próxima temperatura.
+5. **Visualização**:
+   - Gráficos interativos com Altair para temperatura, umidade e vento
+   - Comparação entre duas cidades (opcional)
+   - Estatísticas descritivas (média, mín., máx.)
+   - Previsão para as próximas 3 horas
+6. **Exibição de dados brutos filtráveis**.
+
+---
+
+## 📁 Estrutura do Código
+
+| Seção | Função Principal | Descrição |
+|-------|------------------|-----------|
+| `buscar_dados_climaticos` | Requisição + pré-processamento | Consulta API e transforma resposta JSON em DataFrame |
+| `prever_temperatura` | Modelo de Regressão Linear | Treina e prevê temperatura futura |
+| Sidebar | Entrada do usuário | Seleção de cidade, período e variável |
+| Gráficos | Altair charts | Linhas para temperatura, umidade ou vento |
+| Estatísticas | Métricas calculadas | Média, máxima, mínima |
+| Previsão | Resultado do modelo | Temperatura prevista para 3h à frente |
+| Dados brutos | Tabela filtrável | Exibição dos dados originais tratados |
+
+---
+
+## 📈 Variáveis Usadas na Regressão
+
+| Variável | Significado |
+|----------|-------------|
+| `hour` | Hora do dia |
+| `day_of_week` | Dia da semana (0 = Segunda) |
+| `day_of_year` | Dia do ano (1 a 365/366) |
+| `month` | Mês (1 a 12) |
+| `time_since_start_hours` | Horas desde o primeiro dado |
+| `temp`, `humidity`, `wind_speed` | Valores atuais de clima |
+
+---
+
+## 🛠️ Tecnologias Utilizadas
   
 | Tecnologia         | Finalidade                           |
 |--------------------|--------------------------------------|
@@ -32,8 +77,6 @@ Além da visualização de gráficos, o sistema realiza **previsões de temperat
 | Altair             | Visualização de gráficos interativos |
 | OpenWeatherMap API | Fonte dos dados climáticos           |
 | Requests           | Requisições HTTP                     |
-
-</div>
 
 ---
 
@@ -98,6 +141,24 @@ Acesse no navegador: [http://localhost:8501](http://localhost:8501)
   - Temperatura atual
   - Umidade
   - Velocidade do vento
+
+---
+
+## 💡 Sugestões de Customização (passível de melhorias)
+
+- Trocar o modelo de regressão por **Random Forest**, **XGBoost** ou **LSTM**.
+- Adicionar suporte a múltiplas previsões sequenciais (ex: 6h, 9h à frente).
+- Salvar os dados históricos localmente para reuso offline.
+- Incluir mapas com geolocalização e temperatura por região.
+
+---
+
+## 📚 Referências Técnicas
+
+- [Documentação OpenWeatherMap](https://openweathermap.org/forecast5)
+- [Documentação Streamlit](https://docs.streamlit.io/)
+- [Altair Charts](https://altair-viz.github.io/)
+- [Scikit-Learn Regressão](https://scikit-learn.org/stable/modules/linear_model.html)
 
 ---
 
